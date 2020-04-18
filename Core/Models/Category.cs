@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Core.Entity;
 
 namespace Core.Models
 {
-    public class Category
+    public class Category:IEntity
     {
        
         public int Id { get; set; }
