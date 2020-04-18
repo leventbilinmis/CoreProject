@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using Core.Entity;
 
-namespace Core.Repositories
+namespace Core.Service
 {
-    public interface IRepository<TEntity> where TEntity : class, IEntity, new()
+    public interface IService<TEntity> where TEntity:class,IEntity,new()
     {
         // sadece ilgili olan entity hangisi ise id arama işlemi ile o entity dönecektir.
         Task<TEntity> GetByIdAsync(int id);
@@ -28,6 +28,5 @@ namespace Core.Repositories
         void RemoveRange(IEnumerable<TEntity> entities);
 
         TEntity Update(TEntity entity);
-
     }
 }
